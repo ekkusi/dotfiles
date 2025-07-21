@@ -1,0 +1,14 @@
+- defaults:
+    link:
+      create: true
+      relink: true
+
+- clean: ['~']
+
+- link:
+    ~/.zshrc: .config/.zshrc
+    ~/.config/tmux: .config/tmux
+    ~/.config/nvim: .config/nvim
+    ~/Brewfile: Brewfile
+    ~/.gitconfig: .config/git/.gitconfig
+    ~/.gitglobal_ignore: .config/git/.gitglobal_ignore

@@ -1,0 +1,15 @@
+cardinal90.multi-cursor-case-preserve
+dbaeumer.vscode-eslint
+formulahendry.auto-close-tag
+formulahendry.auto-rename-tag
+graphql.vscode-graphql
+graphql.vscode-graphql-syntax
+ms-azuretools.vscode-bicep
+ms-azuretools.vscode-docker
+ms-playwright.playwright
+ms-python.python
+oderwat.indent-rainbow
+prisma.prisma
+simonsiefke.svg-preview
+vscodevim.vim
+yzhang.markdown-all-in-one

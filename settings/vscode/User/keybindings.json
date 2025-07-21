@@ -1,0 +1,31 @@
+// Place your key bindings in this file to override the defaultsauto[]
+[
+  {
+    "key": "ctrl+cmd+f",
+    "command": "editor.action.startFindReplaceAction",
+    "when": "editorFocus || editorIsOpen"
+  },
+  {
+    "key": "alt+cmd+f",
+    "command": "-editor.action.startFindReplaceAction",
+    "when": "editorFocus || editorIsOpen"
+  },
+  {
+    "key": "cmd+backspace",
+    "command": "workbench.action.chat.remove",
+    "when": "inChat && !inChatInput"
+  },
+  {
+    "key": "cmd+backspace",
+    "command": "-workbench.action.chat.remove",
+    "when": "inChat && !inChatInput"
+  },
+  {
+    "key": "ctrl+cmd+i",
+    "command": "workbench.action.toggleAuxiliaryBar"
+  },
+  {
+    "key": "alt+cmd+b",
+    "command": "-workbench.action.toggleAuxiliaryBar"
+  }
+]

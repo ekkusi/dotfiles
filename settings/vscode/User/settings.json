@@ -1,0 +1,48 @@
+{
+  "tabnine.experimentalAutoImports": true,
+  "omnisharp.path": "latest",
+  "omnisharp.useGlobalMono": "always",
+  "[csharp]": {
+    "editor.defaultFormatter": "ms-dotnettools.csharp",
+    "editor.formatOnSave": true
+  },
+  "editor.tabSize": 2,
+  "editor.insertSpaces": true,
+  "editor.detectIndentation": false,
+  "[markdown]": {
+    "editor.wordWrapColumn": 80,
+  },
+  "vim.leader": "space",
+  "vim.visualModeKeyBindings": [
+    {
+      "before": [
+        "<leader>",
+        "c"
+      ],
+      "commands": [
+        "editor.action.commentLine"
+      ],
+      "when": "editorTextFocus && !editorReadonly"
+    }
+  ],
+  "python.defaultInterpreterPath": "/Users/ekeukko/py_envs/bin/python3",
+  "jupyter.widgetScriptSources": [
+    "jsdelivr.com",
+    "unpkg.com"
+  ],
+  "redhat.telemetry.enabled": false,
+  "[python]": {
+    "editor.formatOnType": true
+  },
+  "editor.inlineSuggest.enabled": true,
+  "editor.snippetSuggestions": "top",
+  "editor.formatOnSave": true,
+  "javascript.updateImportsOnFileMove.enabled": "always",
+  "accessibility.signals.save": {
+    "sound": "always"
+  },
+  "security.workspace.trust.untrustedFiles": "open",
+  "git.suggestSmartCommit": false,
+  "playwright.showTrace": false,
+  "playwright.reuseBrowser": true,
+}
