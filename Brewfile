@@ -1,4 +1,5 @@
 # Packages
+brew "bob"
 brew "cocoapods"
 brew "dotbot"
 brew "fzf"

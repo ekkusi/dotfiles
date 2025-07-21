@@ -1,6 +1,6 @@
 .PHONY: install xcode brew packages
 
-install: xcode brew packages
+install: xcode brew packages neovim
 
 xcode:
 	@echo 'Installing XCode tools...'
@@ -21,3 +21,8 @@ brew:
 packages:
 	@echo "Installing Homebrew packages and apps..."
 	brew bundle check || brew bundle install
+
+neovim:
+	@echo "Installin Neovim..."
+	bob install 0.11.3
+	bob use 0.11.3
