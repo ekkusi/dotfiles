@@ -1,6 +1,6 @@
-.PHONY: install xcode brew packages
+.PHONY: install xcode brew packages tpm
 
-install: xcode brew packages neovim
+install: xcode brew packages neovim tpm
 
 xcode:
 	@echo 'Installing XCode tools...'
@@ -26,3 +26,11 @@ neovim:
 	@echo "Installin Neovim..."
 	bob install 0.11.3
 	bob use 0.11.3
+
+tpm:
+	@if [ -d ~/.tmux/plugins/tpm ]; then \
+		echo "✅ TPM is already installed!"; \
+	else \
+		echo "Installing TPM (Tmux Plugin Panager)..."; \
+	 	git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm && ~/.tmux/plugins/tpm/bin/install_plugins; \
+	fi

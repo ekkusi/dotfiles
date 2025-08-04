@@ -3,7 +3,7 @@ include make/settings.mk # backup restore
 
 .PHONY: setup link complete
 
-setup: install link restore complete 
+setup: link install restore complete 
 
 link:
 	@echo "Linking dotfiles with Dotbot..."
