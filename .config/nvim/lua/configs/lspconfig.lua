@@ -16,9 +16,28 @@ vim.lsp.config("eslint", {
       end,
     })
   end,
+  -- Support for mono repos
+  root_dir = function(bufnr, on_dir)
+    -- The project root is where the LSP can be started from. Get this by lockfiles or .git directory.
+    local root_markers = { "package-lock.json", "yarn.lock", "pnpm-lock.yaml", "bun.lockb", "bun.lock" }
+    root_markers = vim.list_extend(root_markers, { ".git" })
+    local project_root = vim.fs.root(bufnr, root_markers)
+    -- We fallback to the current working directory if no project root is found
+    local project_root_with_fallback = project_root or vim.fn.getcwd()
+
+    on_dir(project_root_with_fallback)
+  end,
 })
 
 vim.lsp.enable "eslint"
+
+vim.lsp.config("ts_ls", {
+  init_options = {
+    preferences = {
+      importModuleSpecifierPreference = "project-relative",
+    },
+  },
+})
 
 -- Go
 -- vim.lsp.config("gopls", {

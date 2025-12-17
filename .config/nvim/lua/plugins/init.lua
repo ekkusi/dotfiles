@@ -16,7 +16,6 @@ return {
     opts = {
       ensure_installed = {
         "cssls",
-        "ts_ls",
         "tailwindcss",
         "prismals",
         "dockerls",
@@ -46,6 +45,14 @@ return {
     config = function(_, opts)
       require("mason-lspconfig").setup(opts)
       require "configs.lspconfig"
+    end,
+  },
+  {
+    "pmizio/typescript-tools.nvim",
+    event = { "BufReadPost", "BufNewFile" },
+    dependencies = { "nvim-lua/plenary.nvim", "neovim/nvim-lspconfig" },
+    config = function()
+      require "configs.typescript-tools"
     end,
   },
   {

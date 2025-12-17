@@ -1,5 +1,6 @@
 require "nvchad.mappings"
 local utils = require "utils"
+local gitsigns = require "gitsigns"
 
 local map = vim.keymap.set
 local del = vim.keymap.del
@@ -145,3 +146,8 @@ end)
 map("n", "<C-S-N>", function()
   harpoon:list():next()
 end)
+
+-- Git
+map("n", "<leader>gb", function()
+  gitsigns.blame_line { full = true }
+end, { desc = "Git blame" })

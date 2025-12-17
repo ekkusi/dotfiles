@@ -10,9 +10,9 @@ hl(0, "RainbowDelimiterBlue", { fg = c.MediumBlue, bg = "NONE" })
 hl(0, "RainbowDelimiterViolet", { fg = c.Violet, bg = "NONE" })
 
 require("rainbow-delimiters.setup").setup {
-  -- query = {
-  --   tsx = "rainbow-parens",
-  -- },
+  query = {
+    tsx = "rainbow-parens",
+  },
   highlight = {
     "RainbowDelimiterYellow",
     "RainbowDelimiterBlue",
