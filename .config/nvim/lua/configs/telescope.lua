@@ -3,6 +3,9 @@ local merge_tb = vim.tbl_deep_extend
 local opts = {
   extensions = {
     ["ui-select"] = require("telescope.themes").get_dropdown {},
+    fzf = {
+      case_mode = "smart_case",
+    },
   },
 
   extensions_list = {
