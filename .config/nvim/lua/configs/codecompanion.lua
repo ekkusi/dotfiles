@@ -11,27 +11,30 @@ require("codecompanion").setup {
   },
   strategies = {
     chat = {
-      adapter = "ollama",
+      adapter = "copilot",
     },
     inline = {
-      adapter = "ollama",
+      adapter = "copilot",
+    },
+    agent = {
+      adapter = "copilot",
     },
   },
-  adapters = {
-    llama3 = function()
-      return require("codecompanion.adapters").extend("ollama", {
-        name = "llama3",
-        schema = {
-          model = {
-            default = "llama3:latest",
-          },
-          num_ctx = {
-            default = 16384,
-          },
-        },
-      })
-    end,
-  },
+  -- adapters = {
+  --   llama3 = function()
+  --     return require("codecompanion.adapters").extend("ollama", {
+  --       name = "llama3",
+  --       schema = {
+  --         model = {
+  --           default = "llama3:latest",
+  --         },
+  --         num_ctx = {
+  --           default = 16384,
+  --         },
+  --       },
+  --     })
+  --   end,
+  -- },
   display = {
     action_palette = {
       opts = {

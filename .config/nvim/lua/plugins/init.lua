@@ -55,6 +55,15 @@ return {
       require "configs.typescript-tools"
     end,
   },
+  -- {
+  --   "neoclide/coc.nvim",
+  --   event = { "BufReadPost", "BufNewFile" },
+  --   branch = "release",
+  -- },
+  -- {
+  --   "hrsh4th/nvim-cmp",
+  --   enabled = false,
+  -- },
   {
     "nvim-treesitter/nvim-treesitter",
     dependencies = {
@@ -89,6 +98,7 @@ return {
   },
 
   "nvim-telescope/telescope-ui-select.nvim",
+  "fannheyward/telescope-coc.nvim",
   {
     "nvim-telescope/telescope-fzf-native.nvim",
     build = "make",
@@ -102,10 +112,16 @@ return {
     opts = function(_, conf)
       conf.extensions = {
         ["ui-select"] = require("telescope.themes").get_dropdown {},
+        ["coc"] = {
+          prefer_locations = true,
+          push_cursor_on_edit = true,
+          timeout = 3000,
+        },
       }
       conf.extensions_list = {
         "ui-select",
         "fzf",
+        "coc",
       }
       local telescope = require "telescope"
       for _, ext in ipairs(conf.extensions_list) do
@@ -171,26 +187,31 @@ return {
       require "configs.harpoon"
     end,
   },
-  {
-    "olimorris/codecompanion.nvim",
-    event = { "BufReadPre", "BufNewFile" },
-    dependencies = {
-      "nvim-lua/plenary.nvim",
-      "nvim-treesitter/nvim-treesitter",
-      "ravitemer/mcphub.nvim",
-    },
-    config = function()
-      require "configs.codecompanion"
-    end,
-  },
-  {
-    "ravitemer/mcphub.nvim",
-    event = { "BufReadPre", "BufNewFile" },
-    build = "npm install -g mcp-hub@latest",
-    config = function()
-      require("mcphub").setup()
-    end,
-  },
+  -- {
+  --   "github/copilot.vim",
+  --   event = { "BufReadPre", "BufNewFile" },
+  -- },
+  -- {
+  --   "olimorris/codecompanion.nvim",
+  --   event = { "BufReadPre", "BufNewFile" },
+  --   dependencies = {
+  --     "nvim-lua/plenary.nvim",
+  --     "nvim-treesitter/nvim-treesitter",
+  --     "github/copilot.vim",
+  --     "ravitemer/mcphub.nvim",
+  --   },
+  --   config = function()
+  --     require "configs.codecompanion"
+  --   end,
+  -- },
+  -- {
+  --   "ravitemer/mcphub.nvim",
+  --   event = { "BufReadPre", "BufNewFile" },
+  --   build = "npm install -g mcp-hub@latest",
+  --   config = function()
+  --     require("mcphub").setup()
+  --   end,
+  -- },
   -- {
   --   "milanglacier/minuet-ai.nvim",
   --   event = { "BufReadPre", "BufNewFile" },

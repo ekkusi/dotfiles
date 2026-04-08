@@ -1,0 +1,9 @@
+{
+  "typescript.preferences.importModuleSpecifier": "project-relative",
+  "tsserver.useLocalTsdk": true,
+  "floatFactory.floatConfig": {
+    "highlight": "NormalFloat",
+    "borderhighlight": "FloatBorder",
+    "maxWidth": 1000
+  }
+}
