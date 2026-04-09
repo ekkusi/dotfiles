@@ -10,26 +10,18 @@
   "editor.insertSpaces": true,
   "editor.detectIndentation": false,
   "[markdown]": {
-    "editor.wordWrapColumn": 80,
+    "editor.wordWrapColumn": 80
   },
   "vim.leader": "space",
   "vim.visualModeKeyBindings": [
     {
-      "before": [
-        "<leader>",
-        "c"
-      ],
-      "commands": [
-        "editor.action.commentLine"
-      ],
+      "before": ["<leader>", "c"],
+      "commands": ["editor.action.commentLine"],
       "when": "editorTextFocus && !editorReadonly"
     }
   ],
   "python.defaultInterpreterPath": "/Users/ekeukko/py_envs/bin/python3",
-  "jupyter.widgetScriptSources": [
-    "jsdelivr.com",
-    "unpkg.com"
-  ],
+  "jupyter.widgetScriptSources": ["jsdelivr.com", "unpkg.com"],
   "redhat.telemetry.enabled": false,
   "[python]": {
     "editor.formatOnType": true
@@ -45,4 +37,11 @@
   "git.suggestSmartCommit": false,
   "playwright.showTrace": false,
   "playwright.reuseBrowser": true,
+  "typescript.preferences.importModuleSpecifier": "project-relative",
+  "eslint.workingDirectories": [
+    {
+      "mode": "auto"
+    }
+  ]
 }
+
