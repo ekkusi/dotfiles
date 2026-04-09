@@ -39,6 +39,9 @@ vim.lsp.config("ts_ls", {
   },
 })
 
+-- C# / .NET (csharp-ls works with .NET 8+; OmniSharp v1.39 breaks with .NET 10 SDK)
+vim.lsp.enable "csharp_ls"
+
 -- Go
 -- vim.lsp.config("gopls", {
 --   -- capabilities = capabilities,

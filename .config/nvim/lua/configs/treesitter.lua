@@ -20,7 +20,8 @@ require("nvim-treesitter.configs").setup({
     "prisma",
     "dockerfile",
     "css",
-    "kotlin"
+    "kotlin",
+    "c_sharp"
   },
 
   -- Autoinstall languages that are not installed. Defaults to false (but you can change for yourself!)

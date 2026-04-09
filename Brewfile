@@ -16,6 +16,7 @@ brew "watchman"
 brew "yarn"
 
 # Casks
+cask "dotnet-sdk"    # .NET 10 (latest), if others are needed, install the manually
 cask "brave-browser"
 cask "docker-desktop"
 cask "font-hack-nerd-font"
