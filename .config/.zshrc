@@ -15,3 +15,8 @@ alias forcepush='git push --force'
 
 # Load machine-specific config if it exists
 [[ -f ~/.zshrc.local ]] && source ~/.zshrc.local
+
+# Load shared shell functions and aliases
+source ~/.dotfiles/shell/utilities.sh
+
+. "$HOME/.local/bin/env"
