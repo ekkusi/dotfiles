@@ -192,19 +192,19 @@ return {
   --   "github/copilot.vim",
   --   event = { "BufReadPre", "BufNewFile" },
   -- },
-  -- {
-  --   "olimorris/codecompanion.nvim",
-  --   event = { "BufReadPre", "BufNewFile" },
-  --   dependencies = {
-  --     "nvim-lua/plenary.nvim",
-  --     "nvim-treesitter/nvim-treesitter",
-  --     "github/copilot.vim",
-  --     "ravitemer/mcphub.nvim",
-  --   },
-  --   config = function()
-  --     require "configs.codecompanion"
-  --   end,
-  -- },
+  {
+    "olimorris/codecompanion.nvim",
+    event = { "BufReadPre", "BufNewFile" },
+    dependencies = {
+      "nvim-lua/plenary.nvim",
+      "nvim-treesitter/nvim-treesitter",
+      "github/copilot.vim",
+      "ravitemer/mcphub.nvim",
+    },
+    config = function()
+      require "configs.codecompanion"
+    end,
+  },
   -- {
   --   "ravitemer/mcphub.nvim",
   --   event = { "BufReadPre", "BufNewFile" },
