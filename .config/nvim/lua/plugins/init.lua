@@ -22,7 +22,6 @@ return {
         "graphql",
         "eslint",
         "lua_ls",
-        "csharp_ls",
       },
     },
     dependencies = {
